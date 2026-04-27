@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-greenDeep: #1F3D2B;
+  --color-olive: #5C7A60;
+  --color-cream: #F7F5F0;
+  --color-beige: #E8E1D9;
+  --color-gold: #C2A878;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: Inter, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
+  body {
+    background: #F7F5F0;
+    color: rgb(23 23 23);
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.14);
+  }
+}
+
+/* Reduce iconography inside Clerk UIs (Clerk may render provider logos) */
+.cl-socialButtonsBlockButton svg,
+.cl-providerIcon {
+  display: none !important;
+}
